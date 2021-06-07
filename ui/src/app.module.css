@@ -1,0 +1,183 @@
+/*
+ * App
+ */
+.app {
+    --black: rgb(0, 0, 0);
+    --gray-dark: rgb(70, 70, 70);
+    --gray: rgb(130, 130, 130);
+    --gray-light: rgb(200, 200, 200);
+    --white: rgb(255, 255, 255);
+    --blue: rgb(51, 42, 134);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.app *, .app *:before, .app *:after {
+    box-sizing: border-box;
+}
+
+.app > section {
+    outline: none;
+}
+
+/*
+ * Base URI Form
+ */
+.baseUri {
+    margin-bottom: 3em;
+}
+
+.baseUri input {
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    height: 2em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--gray-light);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.baseUri input:focus {
+    border-bottom: 1px solid var(--blue);
+}
+
+/*
+ * Login Form
+ */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.login > *:not(:first-child) {
+    margin-top: 1em;
+}
+
+/*
+ * Inputs
+ */
+.login input {
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: .25em;
+    box-shadow: 0 0 1px var(--gray-dark);
+    height: 2em;
+    border: 1px solid var(--gray-light);
+    border-radius: .3em;
+    padding: 0 .4em;
+}
+
+.login input:focus {
+    outline: none;
+    box-shadow: 0 0 2px var(--blue);
+    border-color: var(--blue);
+}
+
+/*
+ * Buttons
+ */
+.login button {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    box-shadow: 1px 1px 0 var(--gray-dark);
+    border: 1px solid var(--gray-light);
+    border-radius: .3em;
+    padding: 0.6em;
+    line-height: 1em;
+}
+
+.login button:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    box-shadow: none;
+}
+
+.login button:focus:not(:active) {
+    outline: none;
+    box-shadow: 0 0 2px var(--blue);
+    border-color: var(--blue);
+}
+
+.login button:disabled {
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+}
+
+/*
+ * Modals
+ */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 0 !important;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal > * {
+    margin: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    border: 1px solid var(--black);
+    border-radius: .3em;
+    width: fit-content;
+    max-width: 23em;
+    background-color: var(--gray-light);
+    padding: 2em;
+}
+
+/*
+ * Progress
+ */
+.progress {
+    width: 230px;
+    height: 1.5em;
+    box-shadow: inset 1px 1px 2px var(--gray-dark);
+    border: 1px solid var(--gray-dark);
+    border-radius: 4px;
+    background-color: var(--gray-light);
+    overflow: hidden;
+}
+
+.progress > div {
+    animation: indeterminate 3s linear infinite;
+    position: relative;
+    width: 4em;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--blue);
+}
+
+@keyframes indeterminate {
+    from {
+        left: -25%;
+        width: 4em;
+    }
+    to {
+        left: 100%;
+        width: 4em;
+    }
+}
+
+/*
+ * Errors
+ */
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
