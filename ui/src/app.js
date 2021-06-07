@@ -40,7 +40,7 @@ const Login = ({baseUri, onLogin}) => {
     const [state, setState] = useState('initial')
     useEffect(() => state === 'initial' && ref.current.focus(), [state])
 
-    const disabled = state === 'processing'
+    const disabled = state === 'processing' || state === 'error'
     const onSubmit = (event) => {
         event.preventDefault();
         (async () => {
