@@ -33,10 +33,8 @@ const Login = ({baseUri, onLogin}) => {
         (async () => {
             setState('processing');
             try {
-                let body = new URLSearchParams({username, password});
-                const response = await fetch(`${baseUri}/login`, {
-                    method: 'POST', body
-                })
+                const params = new URLSearchParams({username, password})
+                const response = await fetch(`${baseUri}/login?${params}`)
                 if (!response.ok) setState('error')
                 else onLogin()
             } catch (error) {
@@ -83,7 +81,7 @@ const LastLogin = ({baseUri, username}) => {
                 setState('error')
             }
         })()
-    }, [retries])
+    }, [baseUri, username, retries])
 
     const retry = () => setRetries(retries + 1)
     const formatter = new Intl.DateTimeFormat('en', {

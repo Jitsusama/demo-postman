@@ -93,6 +93,7 @@
     border-radius: .3em;
     padding: 0.6em;
     line-height: 1em;
+    outline: none;
 }
 
 .login button:active {
@@ -103,7 +104,6 @@
 }
 
 .login button:focus:not(:active) {
-    outline: none;
     box-shadow: 0 0 2px var(--blue);
     border-color: var(--blue);
 }
@@ -136,7 +136,7 @@
     border-radius: .3em;
     width: fit-content;
     max-width: 23em;
-    background-color: var(--gray-light);
+    background-color: var(--white);
     padding: 2em;
 }
 
