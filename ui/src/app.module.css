@@ -36,6 +36,7 @@
     font-size: inherit;
     font-family: inherit;
     height: 2em;
+    width: 28em;
     outline: none;
     border: none;
     border-bottom: 1px solid var(--gray-light);
@@ -54,15 +55,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 16em;
 }
 
 .login > *:not(:first-child) {
     margin-top: 1em;
 }
 
-/*
- * Inputs
- */
+.login label {
+    width: 100%;
+}
+
 .login input {
     display: block;
     font-size: inherit;
@@ -70,6 +73,7 @@
     margin-top: .25em;
     box-shadow: 0 0 1px var(--gray-dark);
     height: 2em;
+    width: 100%;
     border: 1px solid var(--gray-light);
     border-radius: .3em;
     padding: 0 .4em;
@@ -82,9 +86,21 @@
 }
 
 /*
+ * Last Login
+ */
+.lastLogin {
+    outline: none;
+    width: 16em;
+}
+
+.lastLogin h1 {
+    margin-top: 0;
+}
+
+/*
  * Buttons
  */
-.login button {
+.button {
     font-size: inherit;
     font-family: inherit;
     font-weight: 500;
@@ -96,19 +112,23 @@
     outline: none;
 }
 
-.login button:active {
+.button:not(:first-of-type) {
+    margin-left: 1em;
+}
+
+.button:active {
     position: relative;
     top: 1px;
     left: 1px;
     box-shadow: none;
 }
 
-.login button:focus:not(:active) {
+.button:focus:not(:active) {
     box-shadow: 0 0 2px var(--blue);
     border-color: var(--blue);
 }
 
-.login button:disabled {
+.button:disabled {
     background-color: var(--gray-light);
     color: var(--gray-dark);
 }
@@ -144,8 +164,9 @@
  * Progress
  */
 .progress {
-    width: 230px;
-    height: 1.5em;
+    width: 16em;
+    height: 1.15em;
+    margin: 1em 0;
     box-shadow: inset 1px 1px 2px var(--gray-dark);
     border: 1px solid var(--gray-dark);
     border-radius: 4px;
@@ -180,4 +201,5 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    outline: none;
 }
