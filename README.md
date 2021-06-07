@@ -3,7 +3,7 @@ This repository serves as the foundation for a Postman demo.
 ## Initial Setup
 
 1. Clone this repository.
-1. Run `npm install` followed by `npm start` from _ui_ directory.
+1. Run `npm install` followed by `npm start` from the _ui_ directory.
 1. Open Postman
 1. Home -> Start Something New -> Workspace
 1. Set _Name_ to _demo_ -> Create Workspace
