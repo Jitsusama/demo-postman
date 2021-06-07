@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: Backend API
+  description: Backend API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Development Server
+paths:
+  /login:
+    get:
+      summary: Login
+      description: Logs user in when provided credentials are correct.
+      parameters:
+        - $ref: '#/components/parameters/Username'
+        - $ref: '#/components/parameters/Password'
+      responses:
+        204:
+          description: Successfully logged in
+        401:
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /logins:
+    get:
+      summary: Retrieve Logins
+      description: Retrieve historical login records
+      parameters:
+        - $ref: '#/components/parameters/Username'
+      responses:
+        200:
+          description: Successfully retrieved records
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Logins'
+components:
+  parameters:
+    Username:
+      in: query
+      name: username
+      required: true
+      example: john
+      schema:
+        type: string
+    Password:
+      in: query
+      name: password
+      required: true
+      example: secret
+      schema:
+        type: string
+  schemas:
+    Logins:
+      type: array
+      items:
+        type: string
+        format: date-time
+        description: date and time of login
+        example: 2021-06-07T16:42:00Z
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          title: Error message
+          example: an error has occurred
