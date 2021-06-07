@@ -34,6 +34,9 @@ paths:
           description: Successfully retrieved records
           content:
             application/json:
+              example:
+                - 2021-06-07T17:40:31Z
+                - 2020-12-013T08:19:32Z
               schema:
                 $ref: '#/components/schemas/Logins'
 components:
