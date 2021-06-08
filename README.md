@@ -15,6 +15,7 @@ so that you can test an application against the API before it actually exists.
 
 Follow these steps in order to set the stage for the rest of the demo.
 
+1. Install the latest [Node.js LTS](https://nodejs.org/en/) if you don't already have it.
 1. Clone this repository.
 1. Run `npm install` followed by `npm start` from the _ui_ directory.
 1. Open Postman
