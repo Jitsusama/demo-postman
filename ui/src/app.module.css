@@ -28,7 +28,7 @@
  * Base URI Form
  */
 .baseUri {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 .baseUri input {
@@ -40,7 +40,7 @@
     outline: none;
     border: none;
     border-bottom: 1px solid var(--gray-light);
-    border-radius: 3px;
+    border-radius: .5em;
     text-align: center;
 }
 
@@ -76,7 +76,7 @@
     width: 100%;
     border: 1px solid var(--gray-light);
     border-radius: .3em;
-    padding: 0 .4em;
+    padding: 0 .6em;
 }
 
 .login input:focus {
@@ -177,7 +177,7 @@
 .progress > div {
     animation: indeterminate 3s linear infinite;
     position: relative;
-    width: 4em;
+    width: 3em;
     height: 100%;
     border-radius: 4px;
     background-color: var(--blue);
@@ -186,11 +186,11 @@
 @keyframes indeterminate {
     from {
         left: -25%;
-        width: 4em;
+        width: 3em;
     }
     to {
         left: 100%;
-        width: 4em;
+        width: 3em;
     }
 }
 
