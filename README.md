@@ -1,8 +1,9 @@
 ## Overview
 
-Postman is a service that facilitates experimentation, documentation and
-integration of all things API. This is especially useful when trying to learn a
-new API, giving a relatively simple interface to make and record requests.
+[Postman](https://www.postman.com/) is a service that facilitates
+experimentation, documentation and integration of all things API. This is
+especially useful when trying to learn a new API, giving a relatively simple
+interface to make and record requests.
 
 It allows for adhoc definitions, or importing pre-existing API specifications
 in various formats. OpenAPI and WSDL being a couple of examples.
@@ -18,7 +19,7 @@ Follow these steps in order to set the stage for the rest of the demo.
 1. Install the latest [Node.js LTS](https://nodejs.org/en/) if you don't already have it.
 1. Clone this repository.
 1. Run `npm install` followed by `npm start` from the _ui_ directory.
-1. Open Postman
+1. Open/Load [Postman](https://www.postman.com/).
 1. Home -> Start Something New -> Workspace
 1. Set _Name_ to _Demo_ -> Create Workspace
 1. APIs -> Create an API -> Import -> GitHub -> Continue
