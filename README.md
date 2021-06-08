@@ -19,7 +19,7 @@ Follow these steps in order to set the stage for the rest of the demo.
 1. Run `npm install` followed by `npm start` from the _ui_ directory.
 1. Open Postman
 1. Home -> Start Something New -> Workspace
-1. Set _Name_ to _demo_ -> Create Workspace
+1. Set _Name_ to _Demo_ -> Create Workspace
 1. APIs -> Create an API -> Import -> GitHub -> Continue
 1. Set _Repository_ to _postman-demo_ -> Continue -> Import -> Confirm and Close
 1. APIs -> Backend API -> Develop -> Add Mock Server -> Create New Mock Server -> Use an Existing Collection -> Select Collection and Continue
