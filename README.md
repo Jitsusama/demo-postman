@@ -1,6 +1,19 @@
-This repository serves as the foundation for a Postman demo.
+## Overview
+
+Postman is a service that facilitates experimentation, documentation and
+integration of all things API. This is especially useful when trying to learn a
+new API, giving a relatively simple interface to make and record requests.
+
+It allows for adhoc definitions, or importing pre-existing API specifications
+in various formats. OpenAPI and WSDL being a couple of examples.
+
+On the experimentation side, it has a unique feature centred around quickly
+building mock implementations of an API and making them publicly accessible,
+so that you can test an application against the API before it actually exists.
 
 ## Initial Setup
+
+Follow these steps in order to set the stage for the rest of the demo.
 
 1. Clone this repository.
 1. Run `npm install` followed by `npm start` from the _ui_ directory.
@@ -15,11 +28,16 @@ This repository serves as the foundation for a Postman demo.
 
 ## Documentation Demo
 
+These steps show off a high level overview of Postman's documentation
+capabilities.
+
 1. Workspaces -> Demo -> APIs -> Backend API -> Define
 1. Develop -> Documentation
 1. View Collection -> Collections
 
 ## Request Demo
+
+This is an example of how to run requests and see them in action.
 
 1. Workspaces -> Demo -> Collections -> Backend API
 1. Change _No Environment_ to _Demo_
@@ -30,6 +48,8 @@ This repository serves as the foundation for a Postman demo.
 1. History and observe entries.
 
 ## Mock Demo
+
+Finally, here is a live example of an application speaking to a mocked out API.
 
 1. Workspaces -> Demo -> Mock Servers -> Demo -> Copy URL
 1. Go to UI -> Paste URL

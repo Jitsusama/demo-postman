@@ -41,7 +41,7 @@ const Login = ({baseUri, onLogin}) => {
     useEffect(() => state === 'initial' && ref.current.focus(), [state])
 
     const disabled = state === 'processing' || state === 'error'
-    const onSubmit = (event) => {
+    const login = event => {
         event.preventDefault();
         (async () => {
             setState('processing');
@@ -57,7 +57,7 @@ const Login = ({baseUri, onLogin}) => {
     }
 
     return <section tabIndex="-1" ref={ref}>
-        <form onSubmit={onSubmit} className={style.login}>
+        <form onSubmit={login} className={style.login}>
             <label>Username <input
                 type="text" autoComplete="username" value={username}
                 disabled={disabled}
